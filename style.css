@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+:root {
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: hsl(150, 100%, 66%);
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+}
+body {
+  font-family: 'Manrope', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--Dark-Blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 540px;
+  height: 332px;
+  background: var(--Dark-Grayish-Blue);
+  padding: 48px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 10px;
+}
+header {
+  color: var(--Neon-Green, #53ffaa);
+  text-align: center;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 4.086px;
+}
+.quote {
+  color: var(--Light-Cyan, #cee3e9);
+  text-align: center;
+  font-family: Manrope;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -0.3px;
+}
+.dice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-top: 48px;
+  width: 64px;
+  height: 64px;
+  background-color: var(--Neon-Green, #53ffaa);
+  position: absolute;
+  bottom: -30px;
+}
+.dice:hover {
+  background-color: rgb(143, 255, 199);
+  cursor: pointer;
+}
+.img-mobile {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  .container {
+    display: flex;
+    width: 345px;
+    height: 315px;
+    padding: 40px 24px;
+    flex-direction: column;
+    align-items: center;
+  }
+  header {
+    color: var(--Neon-Green, #53ffaa);
+    text-align: center;
+    font-family: Manrope;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 3.457px;
+  }
+  .quote {
+    font-size: 24px;
+  }
+  .img-mobile {
+    display: block;
+  }
+  .img-desktop {
+    display: none;
+  }
+}
